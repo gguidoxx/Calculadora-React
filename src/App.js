@@ -1,4 +1,3 @@
-import freeCodeCampLogo from "./imagenes/freecodecamp-logo.png"
 import './App.css';
 import Boton from "./componentes/boton"
 import Pantalla from "./componentes/pantalla";
@@ -8,7 +7,7 @@ import { evaluate } from "mathjs";
 
 function App() {
 
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('6002');
   
   const nuevoValor = val => {
     setInput(input + val);
@@ -51,7 +50,7 @@ function App() {
       </div>
       <div className="fila">
         <BotonClear manejarClear={() => setInput('')}>
-          Clear
+          BORRAR
         </BotonClear>
       </div>
     </div>

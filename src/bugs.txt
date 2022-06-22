@@ -1,0 +1,17 @@
+Bugs encontrados:
+
+1- Se pueden colocar muchos símbolos matemáticos contínuos, los cuales no se deberían poder colocar. 
+EJ: 380+*-/ 14 --> Esto debería ser imposible en una calculador normal.
+
+2- Una vez la calculadora devuelve el resultado, se le puede agregar números al resultado. La calculadora no debería permitir esto, y al intentar escribir un número debería borrar el resultado.
+
+
+
+
+
+
+Ideas posibles para la calculadora:
+
+1- Un historial de resultados. La calculadora deberá poder devolver un historial con los últimos 5 resultados devueltos. (Se puede utilizar mediante un array o devolverlo como objetos)
+
+2- Modificar el diseño de la calculadora para que sea un poco más agradable a la vista. Se me ocurre un diseño minimalista al estilo calculadoras de teléfono
