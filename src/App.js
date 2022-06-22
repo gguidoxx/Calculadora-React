@@ -1,23 +1,69 @@
-import logo from './logo.svg';
+import freeCodeCampLogo from "./imagenes/freecodecamp-logo.png"
 import './App.css';
+import Boton from "./componentes/boton"
+import Pantalla from "./componentes/pantalla";
+import BotonClear from "./componentes/botonclear";
+import { useState } from "react";
+import { evaluate } from "mathjs";
 
 function App() {
+
+  const [input, setInput] = useState('');
+  
+  const nuevoValor = val => {
+    setInput(input + val);
+  };
+
+  const resultado =() => {
+    if(input ){
+      setInput(evaluate(input));
+    }
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="freecodecamp-logo-contenedor">
+        <img
+          src={freeCodeCampLogo}
+          className="freecodecamp-logo"
+          alt="Logo de FreeCode Camp"/>
+      </div>
+    <div className="contenedor-calculadora">
+      <Pantalla input={input}/>
+      <div className="fila">
+        <Boton manejarClic={nuevoValor}>1</Boton>
+        <Boton manejarClic={nuevoValor}>2</Boton>
+        <Boton manejarClic={nuevoValor}>3</Boton>
+        <Boton manejarClic={nuevoValor}>+</Boton>
+      </div>
+      <div className="fila"> 
+        <Boton manejarClic={nuevoValor}>4</Boton>
+        <Boton manejarClic={nuevoValor}>5</Boton>
+        <Boton manejarClic={nuevoValor}>6</Boton>
+        <Boton manejarClic={nuevoValor}>-</Boton>
+      </div>
+      <div className="fila"> 
+        <Boton manejarClic={nuevoValor}>7</Boton>
+        <Boton manejarClic={nuevoValor}>8</Boton>
+        <Boton manejarClic={nuevoValor}>9</Boton>
+        <Boton manejarClic={nuevoValor}>*</Boton>
+      </div>
+      <div className="fila"> 
+        <Boton manejarClic={resultado}>=</Boton>
+        <Boton manejarClic={nuevoValor}>0</Boton>
+        <Boton manejarClic={nuevoValor}>.</Boton>
+        <Boton manejarClic={nuevoValor}>/</Boton>
+      </div>
+      <div className="fila">
+        <BotonClear manejarClear={() => setInput('')}>
+          Clear
+        </BotonClear>
+      </div>
+    </div>
+
+
+
     </div>
   );
 }
