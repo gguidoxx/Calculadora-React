@@ -23,12 +23,6 @@ function App() {
 
   return (
     <div className="App">
-      <div className="freecodecamp-logo-contenedor">
-        <img
-          src={freeCodeCampLogo}
-          className="freecodecamp-logo"
-          alt="Logo de FreeCode Camp"/>
-      </div>
     <div className="contenedor-calculadora">
       <Pantalla input={input}/>
       <div className="fila">
