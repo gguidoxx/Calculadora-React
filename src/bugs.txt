@@ -15,3 +15,10 @@ Ideas posibles para la calculadora:
 1- Un historial de resultados. La calculadora deberá poder devolver un historial con los últimos 5 resultados devueltos. (Se puede utilizar mediante un array o devolverlo como objetos)
 
 2- Modificar el diseño de la calculadora para que sea un poco más agradable a la vista. Se me ocurre un diseño minimalista al estilo calculadoras de teléfono
+
+3- Colocar un switch para modo claro y modo oscuro. 
+
+4- Poder elegir entre calculadora minimalista o tradicional.
+
+5- Cambiar el ícono y el título de la página. 
+
